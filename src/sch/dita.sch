@@ -25,7 +25,7 @@
     <rule context="$element">
       <report test="descendant::$descendant">
         The <name/> element contains <value-of select="name(descendant::$descendant)"/> element.
-        Using <value-of select="name(descendant::$descendant)"/> in this context is ill-adviced.
+        Using <value-of select="name(descendant::$descendant)"/> in this context is ill-advised.
       </report>
     </rule>
   </pattern>
@@ -222,7 +222,7 @@
            e:phases="recommendation other">
     <rule context="*[contains(@class, ' mapgroup-d/topichead ')]">
       <assert test="@navtitle" role="warning" e:ditaVersions="1.1">
-        The <name/> element should have a navtitle attrbute.
+        The <name/> element should have a navtitle attribute.
       </assert>
       <assert test="@navtitle | *[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]" role="warning" e:ditaVersions="1.2">
         The <name/> element should have a navtitle element.
@@ -242,20 +242,20 @@
     <rule context="*[contains(@class, ' topic/pre ')]">
       <report test="descendant::*[contains(@class, ' topic/image ')]" role="warning">
         The <name/> contains <value-of select="name(descendant::*[contains(@class, ' topic/image ')])"/>.
-        Using <value-of select="name(descendant::*[contains(@class, ' topic/image ')])"/> in this context is ill-adviced.
+        Using <value-of select="name(descendant::*[contains(@class, ' topic/image ')])"/> in this context is ill-advised.
       </report>
       <!-- XXX: Can this actually ever happen? -->
       <report test="descendant::*[contains(@class, ' topic/object ')]" role="warning">
         The <name/> contains <value-of select="name(descendant::*[contains(@class, ' topic/object ')])"/>.
-        Using <value-of select="name(descendant::*[contains(@class, ' topic/object ')])"/> in this context is ill-adviced.
+        Using <value-of select="name(descendant::*[contains(@class, ' topic/object ')])"/> in this context is ill-advised.
       </report>
       <report test="descendant::*[contains(@class, ' hi-d/sup ')]" role="warning">
         The <name/> contains <value-of select="name(descendant::*[contains(@class, ' hi-d/sup ')])"/>.
-        Using <value-of select="name(descendant::*[contains(@class, ' hi-d/sup ')])"/> in this context is ill-adviced.
+        Using <value-of select="name(descendant::*[contains(@class, ' hi-d/sup ')])"/> in this context is ill-advised.
       </report>
       <report test="descendant::*[contains(@class, ' hi-d/sub ')]" role="warning">
         The <name/> contains <value-of select="name(descendant::*[contains(@class, ' hi-d/sub ')])"/>.
-        Using <value-of select="name(descendant::*[contains(@class, ' hi-d/sub ')])"/> in this context is ill-adviced.
+        Using <value-of select="name(descendant::*[contains(@class, ' hi-d/sub ')])"/> in this context is ill-advised.
       </report>
     </rule>
   </pattern>
@@ -382,7 +382,7 @@
       Elements with titles are candidate targets for elements level links.
     </diagnostic>
     <diagnostic id="title_links">
-      Using <value-of select="name(descendant::*[contains(@class, ' topic/xref ')])"/> in this context is ill-adviced
+      Using <value-of select="name(descendant::*[contains(@class, ' topic/xref ')])"/> in this context is ill-advised
       because titles in themselves are often used as links, e.g., in table of contents and cross-references.
     </diagnostic>
   </diagnostics>
